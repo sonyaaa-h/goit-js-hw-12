@@ -41,6 +41,7 @@ function handleSearch(event) {
 
     if (!searchQuery) {
         gallery.innerHTML = "";
+        loadMore.classList.add("hidden");
 
         iziToast.warning({
             title: 'Caution',
@@ -75,6 +76,7 @@ function handleSearch(event) {
         })
         .catch(error => {
             gallery.innerHTML = "";
+            loadMore.classList.add("hidden");
 
             iziToast.error({
                 title: 'Error',
